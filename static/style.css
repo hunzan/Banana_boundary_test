@@ -1,0 +1,126 @@
+/* 整體字體和背景 */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);  /* 柔和水藍漸層 */
+  color: #4B2E05;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(178, 235, 242, 0.6); /* 陰影也改成水藍系 */
+}
+
+/* 標題 */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  user-select: none;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;  /* 大約 24px，視你的 h1 而定 */
+  color: #5D4037;     /* 咖啡色系，搭黃配色也好看 */
+  margin-top: -10px;  /* 稍微拉近 h1 和 p 間距 */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+/* 問題標題 */
+h3 {
+  background-color: #FFD54F;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #5D4037;
+}
+
+/* 選項區 */
+label {
+  display: block;
+  background: #FFF8E1;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+}
+
+/* 選項 hover 效果 */
+label:hover {
+  background: #FFECB3;
+}
+
+/* 選項選取時變色 */
+input[type="radio"]:checked + span,
+input[type="radio"]:checked + * {
+  background: #FFC107;
+  color: #3E2723;
+  font-weight: bold;
+}
+
+/* 按鈕 */
+button {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #FFB300;
+  color: #4E342E;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.7);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #FFA000;
+  color: #3E2723;
+}
+
+/* 禁止選取文字，增加點擊體驗 */
+label, button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* 共用按鈕樣式 */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 15px 8px;
+  background-color: #FFB300;
+  color: #4E342E;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+/* 滑鼠移過去時 */
+.btn:hover {
+  background-color: #FFA000;
+  transform: translateY(-2px);
+}
+
+/* 點擊時縮小一點，有按下去的感覺 */
+.btn:active {
+  background-color: #FF8F00;
+  transform: translateY(1px);
+}
+/* 按鈕區塊，讓按鈕置中 */
+.btn-group {
+  text-align: center;
+}

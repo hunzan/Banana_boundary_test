@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>測驗中</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🍌 開始測驗 🍌</h1>
+    <form method="POST">
+        {% for q in questions %}
+            {% set q_index = loop.index0 %}
+            <h3>{{ loop.index }}. {{ q.question }}</h3>
+            {% for key, opt in q.options.items() %}
+                <label>
+                    <input type="radio" name="q{{ q_index }}" value="{{ key }}" required>
+                    {{ opt.text }}
+                </label><br>
+            {% endfor %}
+        {% endfor %}
+        <div class="btn-group">
+        <button type="submit">送出看結果 🚀</button>
+        </div>
+    </form>
+</body>
+</html>
